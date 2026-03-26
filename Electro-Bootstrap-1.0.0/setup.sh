@@ -32,6 +32,7 @@ showProgress ${last_command_pid}
 wait ${last_command_pid} || print_exit 1 "not able to update the repository."
 
 
+installPackage openjdk-11-jdk
 install_tomcat9_using_wget
 
 cd /home/ubuntu/e-commerce-website/Electro-Bootstrap-1.0.0 || exit 1
