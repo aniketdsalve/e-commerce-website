@@ -45,6 +45,7 @@ echo "Stopping Tomcat9 before deployment..."
 
 # Remove old deployment
 echo "Removing old deployment (if exists)..."
+mkdir -p /opt/tomcat9/webapps/ROOT
 rm -rf /opt/tomcat9/webapps/ROOT/*
 
 # Deploy new application
