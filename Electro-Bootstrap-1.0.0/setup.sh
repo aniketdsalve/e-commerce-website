@@ -34,7 +34,7 @@ wait ${last_command_pid} || print_exit 1 "not able to update the repository."
 
 install_tomcat9_using_wget
 
-cd /home/ubuntu/spring-boot-example || exit 1
+cd /home/ubuntu/e-commerce-website/Electro-Bootstrap-1.0.0 || exit 1
 
 PUBLIC_IP=$(curl ifconfig.me)
 
