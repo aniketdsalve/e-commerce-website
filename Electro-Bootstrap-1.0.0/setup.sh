@@ -44,13 +44,15 @@ echo "Stopping Tomcat9 before deployment..."
 
 # Remove old deployment
 echo "Removing old deployment (if exists)..."
-rm -rf /opt/tomcat9/webapps/*
+rm -rf /opt/tomcat9/webapps/ROOT/*
 
 # Deploy new application
 echo "Deploying application to Tomcat9..."
 /opt/tomcat9/bin/startup.sh
 
-if cp -rf ./* /opt/tomcat9/webapps/
+cd /home/ubuntu/e-commerce-website/Electro-Bootstrap-1.0.0
+
+if cp -rf ./* /opt/tomcat9/webapps/ROOT/
 then
     echo "Application Deployed successfully. You can access it on http://${PUBLIC_IP}:8080"
 else
